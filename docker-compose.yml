@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  questionario:
+    image: questionario:latest
+    deploy:
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+    networks:
+      - erlangms_questionario
+    volumes:
+      - "./app:/app"
+    ports:
+      - "3000:3000"
+      - "4000:4000"
+
+networks:
+  erlangms_questionario:
