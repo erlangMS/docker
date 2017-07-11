@@ -9,6 +9,7 @@ sudo ./docker-build.sh  --app_url_git=http://servicosssi.unb.br/ssi/questionario
 
 # Arquivo de configuração /etc/default/erlangms-docker 
 
+```console
 # Settings for erlangms docker image build
 
 REGISTRY=164.41.106.30:5000
@@ -35,5 +36,5 @@ ERLANGMS_HTTP_PORT=2301
 ERLANGMS_HTTPS_PORT=2344
 ERLANGMS_AUTH_PROTOCOL=auth2
 
-
+```
 
