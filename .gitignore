@@ -1,0 +1,10 @@
+*.tar
+*~
+#*
+*.log
+*.dump
+/logs
+*.gz
+app**
+build**
+.docker*
