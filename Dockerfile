@@ -39,10 +39,10 @@ USER erlangms
 
 #CMD [ "/var/opt/erlangms/ems-bus/bin/ems-bus", "console" ]
 
-LABEL HTTP_PORT="3000"
-LABEL HTTPS_PORT="4000"
-EXPOSE 3000
-EXPOSE 4000
+LABEL HTTP_PORT="{{ HTTP_PORT }}"
+LABEL HTTPS_PORT="{{ HTTPS_PORT }}"
+EXPOSE {{ HTTP_PORT }}
+EXPOSE {{ HTTPS_PORT }}
 
 
 
