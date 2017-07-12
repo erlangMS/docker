@@ -2,18 +2,18 @@ version: "3"
 
 services:
   questionario:
-    image: questionario:latest
+    image: {{ APP_NAME }}:latest
     deploy:
       restart_policy:
         condition: on-failure
         delay: 5s
     networks:
-      - erlangms_questionario
+      - erlangms_{{ APP_NAME }}
     volumes:
       - "./app:/app"
     ports:
-      - "3000:3000"
-      - "4000:4000"
+      - "{{ HTTP_PORT }}:{{ HTTP_PORT }}"
+      - "{{ HTTPS_PORT }}:{{ HTTPS_PORT }}"
 
 networks:
-  erlangms_questionario:
+  erlangms_{{ APP_NAME }}:
