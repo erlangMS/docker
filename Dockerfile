@@ -2,7 +2,7 @@ FROM debian:8
 
 ENV DEBIAN_FRONTEND noninteractive
 
-MAINTAINER phtcosta <evertonagilar@unb.br>
+MAINTAINER evertonagilar <evertonagilar@unb.br>
 
 RUN mkdir /app
 ADD ./app /app
