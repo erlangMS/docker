@@ -2,6 +2,7 @@ FROM debian:8
 
 ENV DEBIAN_FRONTEND noninteractive
 
+MAINTAINER phtcosta <evertonagilar@unb.br>
 
 RUN mkdir /app
 ADD ./app /app
@@ -35,13 +36,13 @@ COPY ./conf/emsbus.conf /var/opt/erlangms/.erlangms/
 
 WORKDIR /var/opt/erlangms/
 ENV HOME /var/opt/erlangms
+ENV APP_VERSION {{ APP_VERSION }}
 USER erlangms
 
 #CMD [ "/var/opt/erlangms/ems-bus/bin/ems-bus", "console" ]
 
 LABEL HTTP_PORT="{{ HTTP_PORT }}"
 LABEL HTTPS_PORT="{{ HTTPS_PORT }}"
-LABEL APP_VERSION="{{ APP_VERSION }}"
 
 EXPOSE {{ HTTP_PORT }}
 EXPOSE {{ HTTPS_PORT }}
