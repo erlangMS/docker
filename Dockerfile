@@ -39,14 +39,13 @@ ENV HOME /var/opt/erlangms
 ENV APP_VERSION {{ APP_VERSION }}
 USER erlangms
 
-#CMD [ "/var/opt/erlangms/ems-bus/bin/ems-bus", "console" ]
-
 LABEL HTTP_PORT="{{ HTTP_PORT }}"
 LABEL HTTPS_PORT="{{ HTTPS_PORT }}"
 
 EXPOSE {{ HTTP_PORT }}
 EXPOSE {{ HTTPS_PORT }}
 
+CMD [ "/var/opt/erlangms/ems-bus/bin/ems-bus", "console" ]
 
 
 
