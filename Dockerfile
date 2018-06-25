@@ -17,10 +17,10 @@ ADD apt_periodic /etc/apt/apt.conf.d/02periodic
 
 RUN echo "***************** Part 1: Debian Linux installation *********************** "
 
-RUN apt-get update && \
-	apt-get install -y --force-yes --no-install-recommends curl wget net-tools && \
-	apt-get install -y --force-yes --no-install-recommends unixodbc tdsodbc freetds-common odbcinst1debian2 odbcinst libcppdb-sqlite3-0 libodbc1 libiodbc2 libcppdb-odbc0 libltdl7 libcppdb0 ldap-utils && \
-	apt-get dist-upgrade -y && apt-get autoremove -y && apt-get clean && apt-get autoclean
+RUN apt-get update
+RUN apt-get install -y --force-yes --no-install-recommends curl wget net-tools
+RUN apt-get install -y --force-yes --no-install-recommends unixodbc tdsodbc freetds-common odbcinst1debian2 odbcinst libcppdb-sqlite3-0 libodbc1 libiodbc2 libcppdb-odbc0 libltdl7 libcppdb0 ldap-utils
+RUN apt-get dist-upgrade -y && apt-get autoremove -y && apt-get clean && apt-get autoclean
 
 
 
