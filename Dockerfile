@@ -26,7 +26,7 @@ RUN apt-get install -y --force-yes --no-install-recommends unixodbc tdsodbc free
 
 RUN echo "***************** Part 2: ERLANGMS installation *********************** "
 
-RUN wget --no-check-certificate https://raw.githubusercontent.com/erlangMS/releases/master/setup/setup-emsbus-linux.x86_64.sh 
+RUN wget -q --no-check-certificate https://raw.githubusercontent.com/erlangMS/releases/master/setup/setup-emsbus-linux.x86_64.sh 
 RUN chmod +x ./setup-emsbus-linux.x86_64.sh
 RUN ./setup-emsbus-linux.x86_64.sh
 RUN rm ./setup-emsbus-linux.x86_64.sh
