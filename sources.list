@@ -1,4 +1,5 @@
 deb http://mirrors.unb.br/debian/ jessie main
 # deb http://mirrors.unb.br/debian/ jessie-updates main
 deb http://deb.debian.org/debian jessie-updates main
-deb http://mirrors.unb.br:3142/security.debian.org/ jessie/updates main
+# deb http://mirrors.unb.br:3142/security.debian.org/ jessie/updates main
+deb http://security.debian.org/ jessie/updates main contrib non-free
