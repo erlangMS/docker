@@ -1,4 +1,4 @@
-FROM erlangms/debian:latest
+FROM debian:8
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -17,10 +17,10 @@ VOLUME /app
 
 RUN echo "***************** Part 1: Debian Linux installation *********************** "
 
-#RUN apt-get update
-#RUN apt-get install -y  ca-certificates
-#RUN apt-get install -y curl wget net-tools
-#RUN apt-get install -y unixodbc  libreadline7 tdsodbc freetds-common odbcinst1debian2 odbcinst libcppdb-sqlite3-0 libodbc1 libiodbc2 libcppdb-odbc0 libltdl7 libcppdb0 ldap-utils libtinfo5 
+RUN apt-get update
+RUN apt-get install -y  ca-certificates
+RUN apt-get install -y curl wget net-tools
+RUN apt-get install -y unixodbc  libreadline7 tdsodbc freetds-common odbcinst1debian2 odbcinst libcppdb-sqlite3-0 libodbc1 libiodbc2 libcppdb-odbc0 libltdl7 libcppdb0 ldap-utils libtinfo5 
 
 
 
