@@ -1,4 +1,4 @@
-FROM debian
+FROM erlangms/debian:latest
 
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -9,18 +9,18 @@ ADD ./app /app
 VOLUME /app
 
 
-ADD sources.list /etc/apt/sources.list
-ADD preferences /etc/apt/preferences
-ADD apt_unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades
-ADD apt_periodic /etc/apt/apt.conf.d/02periodic
+#ADD sources.list /etc/apt/sources.list
+#ADD preferences /etc/apt/preferences
+#ADD apt_unattended-upgrades /etc/apt/apt.conf.d/50unattended-upgrades
+#ADD apt_periodic /etc/apt/apt.conf.d/02periodic
 
 
 RUN echo "***************** Part 1: Debian Linux installation *********************** "
 
-RUN apt-get update
-RUN apt-get install -y  ca-certificates
-RUN apt-get install -y curl wget net-tools
-RUN apt-get install -y unixodbc  libreadline7 tdsodbc freetds-common odbcinst1debian2 odbcinst libcppdb-sqlite3-0 libodbc1 libiodbc2 libcppdb-odbc0 libltdl7 libcppdb0 ldap-utils libtinfo5 
+#RUN apt-get update
+#RUN apt-get install -y  ca-certificates
+#RUN apt-get install -y curl wget net-tools
+#RUN apt-get install -y unixodbc  libreadline7 tdsodbc freetds-common odbcinst1debian2 odbcinst libcppdb-sqlite3-0 libodbc1 libiodbc2 libcppdb-odbc0 libltdl7 libcppdb0 ldap-utils libtinfo5 
 
 
 
