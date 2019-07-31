@@ -20,7 +20,7 @@ RUN echo "***************** Part 1: Debian Linux installation ******************
 RUN apt-get update
 RUN apt-get install -y  ca-certificates
 RUN apt-get install -y  --no-install-recommends curl wget net-tools
-RUN apt-get install -y  --no-install-recommends unixodbc  libreadline7 tdsodbc freetds-common odbcinst1debian2 odbcinst libcppdb-sqlite3-0 libodbc1 libiodbc2 libcppdb-odbc0 libltdl7 libcppdb0 ldap-utils
+RUN apt-get install -y  --no-install-recommends unixodbc  libreadline7 tdsodbc freetds-common odbcinst1debian2 odbcinst libcppdb-sqlite3-0 libodbc1 libiodbc2 libcppdb-odbc0 libltdl7 libcppdb0 ldap-utils libtinfo5 
 
 
 
