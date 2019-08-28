@@ -33,7 +33,7 @@ RUN echo "***************** Part 2: ERLANGMS installation **********************
 
 RUN wget -q --no-check-certificate https://raw.githubusercontent.com/erlangMS/releases/master/setup/setup-emsbus-linux.x86_64.sh 
 RUN chmod +x ./setup-emsbus-linux.x86_64.sh
-RUN ./setup-emsbus-linux.x86_64.sh --release_version=2.0.6
+RUN ./setup-emsbus-linux.x86_64.sh --release_version=2.0.8
 RUN rm ./setup-emsbus-linux.x86_64.sh
 
 
